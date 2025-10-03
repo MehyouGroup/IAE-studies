@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>All IAE Studies | Intercontinental Aviation Enterprise</title>
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Montserrat (for buttons and headings) -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* Background: same image as index + subtle vignette overlay */
+    :root{
+      --btn-bg: #D2922A;
+      --btn-color: #ffffff;
+      --glass-bg: rgba(255,255,255,0.08);
+      --glass-border: rgba(255,255,255,0.22);
+      --topbar-bg: rgba(255,255,255,0.10); /* ~10% */
+      --text-main: #ffffff;
+      --text-muted: rgba(255,255,255,0.8);
+    }
+    html, body {
+      height: 100%;
+    }
+    body{
+      margin: 0;
+      color: var(--text-main);
+      background: #0b0b0b url("assets/background.jpg") center/cover fixed no-repeat;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      position: relative;
+    }
+    /* dark overlay for readability */
+    body::before{
+      content:"";
+      position: fixed; inset: 0;
+      background: radial-gradient(1000px 600px at 50% 0%, rgba(0,0,0,0.25), transparent 60%),
+                  linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.55));
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Topbar (10% transparent + blur) */
+    .topbar{
+      position: sticky; top: 0; z-index: 10;
+      background: var(--topbar-bg);
+      backdrop-filter: saturate(120%) blur(10px);
+      -webkit-backdrop-filter: saturate(120%) blur(10px);
+      border-bottom: 1px solid var(--glass-border);
+      padding: 12px 16px;
+      display:flex; justify-content:space-between; align-items:center;
+    }
+    .topbar strong{
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: .2px;
+    }
+
+    /* Grid */
+    .grid{
+      position: relative; z-index: 1; /* above overlay */
+      display:grid; gap:24px;
+      grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+      padding: 28px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Glass cards */
+    .card{
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      border-radius: 18px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      backdrop-filter: blur(16px) saturate(120%);
+      -webkit-backdrop-filter: blur(16px) saturate(120%);
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .card:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 16px 38px rgba(0,0,0,0.35);
+      border-color: rgba(255,255,255,0.3);
+    }
+    .card h3{
+      margin:0 0 10px;
+      font-size: 18px; line-height:1.35;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .card p{ margin:0 0 14px; color: var(--text-muted); font-size:14px; }
+
+    .pill{
+      display:inline-block;
+      border:1px solid var(--glass-border);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size:12px;
+      color: var(--text-main);
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    /* Buttons: as requested */
+    a.btn{
+      display:inline-block;
+      color: var(--btn-color);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      background: var(--btn-bg);
+      padding: 12px 15px;
+      border: none;
+      text-decoration: none;
+      border-radius: 999px; /* keep it modern; remove if you want square */
+      box-shadow: 0 6px 18px rgba(210,146,42,0.35);
+      transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+    }
+    a.btn:hover{ transform: translateY(-1px); box-shadow: 0 8px 22px rgba(210,146,42,0.45); }
+    a.btn:active{ transform: translateY(0); box-shadow: 0 4px 14px rgba(210,146,42,0.35); opacity: .95; }
+
+    /* Make the top-right "Open latest" match the same button style */
+    .topbar .btn{ margin-left: auto; }
+
+    /* Small screens */
+    @media (max-width: 520px){
+      .grid{ padding: 16px; gap:16px; }
+      .card{ padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <strong>All IAE Studies</strong>
+    <a class="btn" href="index.html">Open latest</a>
+  </div>
+
+  <div class="grid" id="studies-grid"></div>
+
+  <script src="studies/studies.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(){
+      try {
+        if (!window.__IAE_STUDIES__ || !Array.isArray(window.__IAE_STUDIES__.STUDIES)) {
+          console.error("IAE studies registry not found.");
+          return;
+        }
+        var STUDIES = window.__IAE_STUDIES__.STUDIES;
+        var grid = document.getElementById('studies-grid');
+        if (!grid) return;
+
+        STUDIES.forEach(function(s){
+          var el = document.createElement('div');
+          el.className = 'card';
+          el.innerHTML =
+              '<h3>' + s.title + '</h3>'
+            + '<p><span class="pill">' + s.date + '</span></p>'
+            + '<a class="btn" href="index.html?study=' + encodeURIComponent(s.slug) + '">Open study</a>';
+          grid.appendChild(el);
+        });
+      } catch (e) { console.error(e); }
+    });
+  </script>
+</body>
+</html>
