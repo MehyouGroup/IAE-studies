@@ -3,7 +3,7 @@ const STUDIES = [
   {
    slug: "ai-in-aviation-2025",
    title: "The Integration of AI in Aviation (2025)",
-   pdf: "studies/ai-in-aviation-2025/The Integration of AI in Aviation 2025.pdf",
+   pdf: "studies/AI-in-aviation-2025/The Integration of AI in Aviation 2025.pdf",
    date: "2025-11-10",
    outline: [
      { title: "The Integration of AI in Aviation", dest: 2 },
