@@ -4,7 +4,7 @@ const STUDIES = [
   slug: "path-to-sustainable-aviation-2025",
   title: "The Path to Sustainable Aviation (2025)",
   pdf: "studies/path-to-sustainable-aviation-2025/The Path to Sustainable Aviation.pdf",
-  date: "2025-12-01",
+  date: "2025-12-10",
   outline: [
     { title: "The Path to Sustainable Aviation", dest: 2 },                 // intro: climate impact context (2.5% CO₂; ~4% warming incl. non-CO₂)
     { title: "The Non-CO₂ Challenge", dest: 3 },                            // contrails & NOx dominate warming
