@@ -1,6 +1,25 @@
 // studies/studies.js
 const STUDIES = [
   {
+  slug: "path-to-sustainable-aviation-2025",
+  title: "The Path to Sustainable Aviation (2025)",
+  pdf: "studies/path-to-sustainable-aviation-2025/The Path to Sustainable Aviation.pdf",
+  date: "2025-12-01",
+  outline: [
+    { title: "The Path to Sustainable Aviation", dest: 2 },                 // intro: climate impact context (2.5% CO₂; ~4% warming incl. non-CO₂)
+    { title: "The Non-CO₂ Challenge", dest: 3 },                            // contrails & NOx dominate warming
+    { title: "Sustainable Aviation Fuel (SAF) Revolution", dest: 4 },       // lifecycle cuts up to ~80%
+    { title: "Scaling Production & Policy Mandates", dest: 5 },             // ReFuelEU, US incentives; supply/cost gaps
+    { title: "Technological Innovation – Engine Tech", dest: 6 },           // e.g., CFM RISE open-fan >20% fuel burn reduction
+    { title: "Technological Innovation – Airframe & Hybrid/H₂", dest: 7 },  // composites, laminar flow; hydrogen timeline shift; hybrid-electric
+    { title: "Future Concepts (BWB, eVTOL)", dest: 8 },
+    { title: "Policy & Offsetting (CORSIA)", dest: 9 },                     // baseline 2019–2025; credits; 2025 review
+    { title: "The Net-Zero Pathway", dest: 10 },                              // Fly Net Zero 2050; ~80% reductions + removals/offsets
+    { title: "Conclusion", dest: 11 },
+    { title: "Contact", dest: 12 }
+  ]
+},
+  {
    slug: "ai-in-aviation-2025",
    title: "The Integration of AI in Aviation",
    pdf: "studies/AI-in-aviation-2025/The integration of AI in aviation 2025.pdf",
