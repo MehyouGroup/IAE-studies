@@ -2,7 +2,7 @@
 const STUDIES = [
   {
   slug: "global-airlines-scale-power-2026",
-  title: "Global Airlines: Scale & Power (Jan 2026)",
+  title: "Global Airlines: Scale & Power",
   pdf: "studies/global-airlines-scale-power-2026/Global Airlines Scale & Power.pdf",
   date: "2026-01-09",
   outline: [
@@ -18,7 +18,7 @@ const STUDIES = [
 },
   {
   slug: "path-to-sustainable-aviation-2025",
-  title: "The Path to Sustainable Aviation (2025)",
+  title: "The Path to Sustainable Aviation",
   pdf: "studies/path-to-sustainable-aviation-2025/The Path to Sustainable Aviation.pdf",
   date: "2025-12-10",
   outline: [
