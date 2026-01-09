@@ -1,6 +1,22 @@
 // studies/studies.js
 const STUDIES = [
   {
+  slug: "global-airlines-scale-power-2026",
+  title: "Global Airlines: Scale & Power (Jan 2026)",
+  pdf: "studies/global-airlines-scale-power-2026/Global Airlines Scale & Power.pdf",
+  date: "2026-01-09",
+  outline: [
+    { title: "Airlines in the World: Scale, Trends & Future Dynamics", dest: 2 },   // 4.5B+ passengers; 5,000+ airlines; key challenges
+    { title: "Global Scale & Economic Footprint", dest: 3 },                        // 4.7B pax (2024), ~$1T revenue, 87M jobs, 28k+ fleet
+    { title: "Major Players & Market Leaders", dest: 4 },                           // mega-carriers; alliances (Star/oneworld/SkyTeam)
+    { title: "Regional Dynamics & Growth Hotspots", dest: 5 },                      // APAC 40% share; ME hubs; EU/NA dynamics
+    { title: "Business Models & Competitive Strategies", dest: 6 },                 // FSC vs LCC/ULCC; ancillaries; digital/NDC
+    { title: "Challenges: Costs, Regulation & Disruptions", dest: 7 },              // fuel ~30% costs; labor/geopolitics; ETS/CORSIA; supply chain
+    { title: "Future Outlook: Consolidation & Innovation", dest: 8 },               // mergers; 9B pax by 2040; UAM/eVTOL; margins
+    { title: "Contact", dest: 9 }
+  ]
+},
+  {
   slug: "path-to-sustainable-aviation-2025",
   title: "The Path to Sustainable Aviation (2025)",
   pdf: "studies/path-to-sustainable-aviation-2025/The Path to Sustainable Aviation.pdf",
