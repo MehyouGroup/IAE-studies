@@ -1,6 +1,20 @@
 // studies/studies.js
 const STUDIES = [
   {
+  slug: "airports-developments-worldwide-2026",
+  title: "Airports Developments Worldwide",
+  pdf: "studies/airports-developments-worldwide-2026/Airports Developments Worldwide.pdf",
+  date: "2026-07-30",
+  outline: [
+    { title: "Airports Developments Worldwide", dest: 1 },
+    { title: "Executive Summary", dest: 2 },        // $700B+ across 50+ projects; capacity to double by 2040
+    { title: "Market Overview", dest: 3 },           // King Salman, Al Maktoum, Long Thanh, DFW Terminal F, etc.
+    { title: "Regional Highlights", dest: 4 },        // Middle East, Asia-Pacific, Africa, Europe/North America
+    { title: "Challenges & Innovations", dest: 5 },   // congestion, AI/biometrics, sustainable design
+    { title: "Contact", dest: 6 }
+  ]
+},
+  {
   slug: "global-airlines-scale-power-2026",
   title: "Global Airlines: Scale & Power",
   pdf: "studies/global-airlines-scale-power-2026/Global Airlines Scale & Power.pdf",
