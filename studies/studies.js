@@ -1,6 +1,24 @@
 // studies/studies.js
 const STUDIES = [
   {
+  slug: "consumer-behavior-airline-service-innovations-2026",
+  title: "The Impact of Consumer Behavior on Airline Service Innovations",
+  pdf: "studies/consumer-behavior-airline-service-innovations-2026/The Impact of Consumer Behavior on Airline Service Innovations.pdf",
+  date: "2026-08-13",
+  outline: [
+    { title: "The Impact of Consumer Behavior on Airline Service Innovations", dest: 2 },  // service innovation driven by trust, convenience, digital efficiency, perceived value
+    { title: "Consumer Behavior in Aviation", dest: 3 },                                    // perceived value drives satisfaction; digital booking raises transparency
+    { title: "Service Innovation as a Competitive Driver", dest: 4 },                        // Finnair A350 case; personalized bundles from customer data
+    { title: "Digital Expectations", dest: 5 },                                              // self-service, AI/predictive analytics reshape acceptable service
+    { title: "Value, Price, and Loyalty", dest: 6 },                                         // innovation works when perceived as useful, not cosmetic; loyalty monetization
+    { title: "Sustainability and Consumer Choice", dest: 7 },                                // Lufthansa: ~7M passengers chose sustainable options in 2025
+    { title: "Future Direction", dest: 8 },                                                  // convergence of personalization, automation, sustainability
+    { title: "Conclusion", dest: 9 },
+    { title: "References", dest: 10 },
+    { title: "Contact", dest: 11 }
+  ]
+},
+  {
   slug: "airports-developments-worldwide-2026",
   title: "Airports Developments Worldwide",
   pdf: "studies/airports-developments-worldwide-2026/Airports Developments Worldwide.pdf",
