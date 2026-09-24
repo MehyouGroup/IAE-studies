@@ -1,6 +1,28 @@
 // studies/studies.js
 const STUDIES = [
   {
+  slug: "electric-aircraft-regional-aviation-networks-2026",
+  title: "Electric Aircraft and Regional Aviation Networks",
+  pdf: "studies/electric-aircraft-regional-aviation-networks-2026/Electric Aircraft and Regional Aviation Networks.pdf",
+  date: "2026-09-24",
+  outline: [
+    { title: "Electric Aircraft and Regional Aviation Networks", dest: 2 },  // first uses: training, cargo, thin regional routes — not high-capacity jet replacement
+    { title: "Regional Networks as the Early Market", dest: 3 },             // short sectors, smaller aircraft, airports with spare capacity
+    { title: "The Energy-Density Challenge", dest: 4 },                      // jet fuel vs battery mass; Pipistrel Velis Electro (EASA certified 2020)
+    { title: "Aircraft Programs: All-Electric vs Hybrid", dest: 5 },         // Eviation Alice (9 pax, 150–250 mi); Heart Aerospace ES-30 (30 pax)
+    { title: "Network Implications", dest: 6 },                              // section divider: economics and geography of regional service
+    { title: "Route Economics and Viability", dest: 7 },                     // lower energy/maintenance cost may revive thin routes; cargo & medical
+    { title: "Hub Feeding and Charging Constraints", dest: 8 },              // feeder segments only work if charge time fits airline schedules
+    { title: "Airport Infrastructure", dest: 9 },                            // only 47 U.S. airports had charging in airport plans as of end-2025
+    { title: "Environmental and Community Effects", dest: 10 },              // zero in-flight emissions & lower noise; lifecycle depends on grid
+    { title: "Regulation and Safety", dest: 11 },                            // certification is the near-term bottleneck; thermal runaway, EASA special conditions
+    { title: "Economic Trade-Offs", dest: 12 },                              // low production volumes, battery residual value, charge-time utilization
+    { title: "Outlook", dest: 13 },                                          // late 2020s–early 2030s: training/cargo/commuter; hybrid 19–30 seat later
+    { title: "Sources", dest: 14 },
+    { title: "Contact", dest: 15 }
+  ]
+},
+  {
   slug: "consumer-behavior-airline-service-innovations-2026",
   title: "The Impact of Consumer Behavior on Airline Service Innovations",
   pdf: "studies/consumer-behavior-airline-service-innovations-2026/The Impact of Consumer Behavior on Airline Service Innovations.pdf",
